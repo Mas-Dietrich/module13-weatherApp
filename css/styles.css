@@ -308,5 +308,91 @@ template {
   display: none;
 }
 
-/* end of media query */
-/* end of media query */
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  box-sizing: border-box;
+}
+
+body h1 {
+  text-align: center;
+  font-size: 1.75rem;
+}
+body h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+body header {
+  background-color: #800000;
+  padding: 0.5rem 2%;
+  color: white;
+  font-family: "Merriweather", serif;
+}
+body header header h2 {
+  font-family: "Poppins", sans-serif;
+}
+body div#bountifulWeather {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2vh 1rem;
+}
+body div#bountifulWeather div {
+  display: grid;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 2% 0;
+  background-color: #e6cccc;
+}
+body div#bountifulWeather div span, body div#bountifulWeather div p, body div#bountifulWeather div img {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+body div#bountifulWeather div span {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #800000;
+  color: white;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+}
+body div#bountifulWeather div p {
+  font-size: 1.5rem;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+body div#bountifulWeather div img {
+  justify-self: center;
+}
+
+footer {
+  background-color: #800000;
+  color: white;
+  padding: 0.5rem 2%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (min-width: 35rem) {
+  body div#bountifulWeather {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+} /* end of media query */
+@media only screen and (min-width: 64rem) {
+  header, nav, main, footer {
+    max-width: 64rem;
+    margin: auto;
+  }
+  body div#bountifulWeather {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+} /* end of media query */

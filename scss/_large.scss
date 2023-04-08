@@ -1,0 +1,12 @@
+header, nav, main, footer {
+    max-width: 64rem;
+    margin:auto;
+}
+
+
+body {
+    div#bountifulWeather {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+}

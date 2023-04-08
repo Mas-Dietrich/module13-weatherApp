@@ -22,8 +22,6 @@ fetch(apiURL)
     //Make sure we can see out API data in the console
     console.log(weatherInfo);
     //Display the city name in the h2 at the top of the page
-    let bountful = weatherInfo.name;
-    document.getElementById('city').textContent = bountful;
 
     let mylist = weatherInfo.list;
 
@@ -57,7 +55,9 @@ fetch(apiURL)
             theDay.appendChild(theTemp)
             theDay.appendChild(theIcon);
 
-            document.getElementById('bountifulWeather').appendChild(theDay)
+            document.getElementById('bountifulWeather').appendChild(theDay);
+            let bountful = weatherInfo.city.name;
+            document.getElementById('city').textContent = bountful;
             
         }
     }
